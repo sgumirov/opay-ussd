@@ -5,8 +5,8 @@ Welcome to OPay. Pay/recharge:
     </div>
     <navigation>
         <link accesskey="1" pageId="airtime.xml">Airtime</link>
-        <link accesskey="2" pageId="todo.xml">Electricity</link>
-        <link accesskey="3" pageId="todo.xml">Water</link>
-        <link accesskey="4" pageId="todo.xml">Cable TV</link>
+        <link accesskey="2" pageId="todo.xml">Electricity(-)</link>
+        <link accesskey="3" pageId="todo.xml">Water(-)</link>
+        <link accesskey="4" pageId="todo.xml">Cable TV(-)</link>
     </navigation>
 </page>
