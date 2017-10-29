@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page version="2.0">
+    <div protocol="ussd">
+        OPay-Airtime.
+        <input navigationId="form" title="Other amount (5-500KSh)" name="dest"/>
+    </div>
+    <navigation id="form" protocol="ussd">
+        <link pageId="payment.xml"></link>
+    </navigation>
+    <navigation>
+        <link accesskey="0" pageId="amount.xml" type="back">Back</link>
+    </navigation>
+</page>
