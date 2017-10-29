@@ -1,0 +1,1 @@
+This is demo USSD service for OPay based on SADS Eyeline platform.
