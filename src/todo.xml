@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <page version="2.0">
     <div protocol="ussd">
-        OPay. This feature is to be done.
+OPay. This feature is to be done.
     </div>
     <navigation>
         <link accesskey="1" pageId="index.xml">Go to main screen</link>

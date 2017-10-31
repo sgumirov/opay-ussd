@@ -2,7 +2,7 @@
 <page version="2.0">
     <div protocol="ussd">
         OPay-Airtime.
-        <input navigationId="form" title="Reply with phone number" name="dest"/>
+        <input navigationId="form" title=" Reply with phone number" name="dest"/>
     </div>
     <navigation id="form" protocol="ussd">
         <link pageId="fixed-amount.xml"></link>
