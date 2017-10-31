@@ -2,10 +2,10 @@
 <page version="2.0">
     <div protocol="ussd">
 To pay: select M-pesa->Lipa na M-pesa->Select Pay bill.
-Enter: Business no.: 510800
-Account no.: UY708250
+Enter: Business #: 510800
+Account #: UY708250
 Amount: KSh10
 Enter your M-pesa PIN.
-Then *135*876#
+To check *135*876#
     </div>
 </page>
