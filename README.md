@@ -4,6 +4,7 @@ This is a demo USSD service for OPay based on SADS subsystem of Eyeline MiniApps
 
 ## Pages
 
+```
 Start -> 
   Airtime (inputs phone number) -> 
   Amount (selects or Other amount) -> [Other (enters amount)] -> 
@@ -11,6 +12,7 @@ Start ->
   M-Pesa (manual payment) - user closes dialog.
 Start again -> 
   Transaction confirmation
+```
 
 ## How to start
 
@@ -23,3 +25,4 @@ npm install
 npm install -g micro
 npm start
 ```
+
