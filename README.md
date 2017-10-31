@@ -26,3 +26,8 @@ npm install -g micro
 npm start
 ```
 
+This makes service uses default 3000 port on ipv4 localhost.
+
+# Dependencies
+
+Built on top of `micro` microservice framework.
