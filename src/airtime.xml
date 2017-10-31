@@ -5,7 +5,7 @@
         <input navigationId="form" title="Reply with phone number." name="dest"/>
     </div>
     <navigation id="form" protocol="ussd">
-        <link pageId="amount.xml"></link>
+        <link pageId="fixed-amount.xml"></link>
     </navigation>
     <navigation>
         <link accesskey="0" pageId="index.xml" type="back">Back</link>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page version="2.0">
+    <div protocol="ussd">
+Transaction failed.
+Transaction# 42666777770000000000
+Tel# 076812345
+KSh100
+Method:wallet
+</div>
+</page>

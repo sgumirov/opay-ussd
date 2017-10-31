@@ -3,6 +3,8 @@ const parse = require('urlencoded-body-parser')
 const url = require('url');
 var http = require('http');
 var fs = require('fs');
+var files = ["index.xml", "airtime.xml", "fixed-amount.xml", "custom-amount.xml", "mpesa.xml", "payment.xml", "todo.xml"];
+var last = {};
 
 function parseCookies (request) {
     var list = {},
@@ -16,28 +18,40 @@ function parseCookies (request) {
     return list;
 }
 
-function serveFile(res, filename) {
+function serveFile(res, abon, filename) {
   var mimeType = "text/xml";
   res.writeHead(200, mimeType);
   var fileStream = fs.createReadStream(filename);
+//  send(res, 200, fileStream);
   fileStream.pipe(res);
+  last[abon] = filename;
+  console.log("last["+abon+"]="+filename);
 }
 
 module.exports = async function (req, res) {
-  console.log(req.headers);
-  console.log(parseCookies(req));
-  console.log(parseCookies(req).Session);
-  const { path } = url.parse(req.url);
-  console.log(path);
-  const data = await parse(req);
-  console.log(data);
+  try {
+    const { path } = url.parse(req.url);
+    var query = url.parse(req.url, true).query;
+//    console.log(parseCookies(req).Session);
+//    const data = await parse(req);
+//    console.log(data);
+    var abon = query.abonent;
+    console.log(abon+" : "+path);
 
-  if (path.includes("index.xml")) {
-    serveFile(req, "index.xml");
+    //user is back to finish payment
+    if (last[abon]==="src/mpesa.xml") {
+      serveFile(res, abon, "src/transaction-success.xml");
+      return;
+    }
+    
+    for (i = 0; i < files.length; i++) {
+      if (path.includes(files[i])) {
+        serveFile(res, abon, "src/"+files[i]);
+        return;
+      }
+    }
+  } catch (err) {
+    console.log(err);
+    send(res, 500)
   }
-
-  if ("/1" === path)
-    send(res, 200, '1 Hello World!');
-  if ("/2" === path)
-    send(res, 200, '2 Hello World!');
 };
