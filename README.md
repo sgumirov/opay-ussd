@@ -31,3 +31,11 @@ This makes service uses default 3000 port on ipv4 localhost.
 # Dependencies
 
 Built on top of [micro](https://github.com/zeit/micro "micro") microservice framework.
+
+# Author
+
+Shamil Gumirov
+
+# License
+
+Use as-is, no warranties :) No specific license.
