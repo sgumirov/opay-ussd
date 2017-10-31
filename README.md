@@ -16,8 +16,10 @@ Start again ->
 
 To get and start service behind local nginx:
 
+```bash
 git clone https://github.com/sgumirov/opay-ussd
 cd opay-ussd
 npm install
 npm install -g micro
 npm start
+```
