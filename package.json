@@ -4,7 +4,7 @@
   "description": "This is demo USSD service for OPay based on SADS Eyeline platform.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "micro"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/sgumirov/opay-ussd#readme",
   "dependencies": {
-    "micro": "^9.0.0"
+    "micro": "latest",
+    "urlencoded-body-parser": "^2.0.1"
   }
 }
