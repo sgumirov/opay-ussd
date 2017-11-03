@@ -6,7 +6,7 @@
     <navigation>
         <link accesskey="1" pageId="mpesa.xml">M-Pesa</link>
         <link accesskey="2" pageId="todo.xml">Airtel(-)</link>
-        <link accesskey="3" pageId="card.xml">Visa/Mastercard(-)</link>
+        <link accesskey="3" pageId="todo.xml">Visa/Mastercard(-)</link>
         <link accesskey="0" pageId="amount.xml" type="back">Back</link>
     </navigation>
 </page>
