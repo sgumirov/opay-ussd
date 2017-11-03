@@ -38,4 +38,4 @@ Shamil Gumirov
 
 # License
 
-As-is, no warranties :) No specific license.
+As-is.
