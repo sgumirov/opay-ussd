@@ -3,6 +3,13 @@ const parse = require('urlencoded-body-parser')
 const url = require('url');
 var http = require('http');
 var fs = require('fs');
+// initiallise session
+const session = require('micro-cookie-session')({
+  name: 'session',
+  keys: ['someverystringsecretstring'],
+  maxAge: 24 * 60 * 60 * 1000
+})
+
 var files = ["index.xml", "airtime.xml", "fixed-amount.xml", "custom-amount.xml", "mpesa.xml", "payment.xml", "todo.xml"];
 var last = {};
 
@@ -32,18 +39,19 @@ module.exports = async function (req, res) {
   try {
     const { path } = url.parse(req.url);
     var query = url.parse(req.url, true).query;
-//    console.log(parseCookies(req).Session);
-//    const data = await parse(req);
-//    console.log(data);
     var abon = query.abonent;
-    console.log(abon+" : "+path);
+
+    // enable session storage in cookie 
+    session(req, res);
+    //console.log("saved phone in session="+req.session.phone);
+    //req.session.phone = abon;
 
     //user is back to finish payment
     if (last[abon]==="src/mpesa.xml") {
       serveFile(res, abon, "src/transaction-success.xml");
       return;
     }
-    
+
     for (i = 0; i < files.length; i++) {
       if (path.includes(files[i])) {
         serveFile(res, abon, "src/"+files[i]);
