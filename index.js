@@ -3,10 +3,9 @@ const parse = require('urlencoded-body-parser')
 const url = require('url');
 var http = require('http');
 var fs = require('fs');
-// initiallise session
 const session = require('micro-cookie-session')({
   name: 'session',
-  keys: ['someverystringsecretstring'],
+  keys: ['someverystringsecretstring1'],
   maxAge: 24 * 60 * 60 * 1000
 })
 
@@ -44,6 +43,7 @@ module.exports = async function (req, res) {
 
     // enable session storage in cookie 
     session(req, res);
+    req.session.abon = abon
 
     //user is back to finish payment
     if (last[abon]==="src/mpesa.xml") {
