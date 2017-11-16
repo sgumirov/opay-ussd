@@ -26,7 +26,7 @@ function parseCookies (request) {
 }
 
 function serveFile(res, abon, filename) {
-  var mimeType = "text/xml";
+  var mimeType = "text/html";
   res.writeHead(200, mimeType);
   var fileStream = fs.createReadStream(filename);
 //  send(res, 200, fileStream);
@@ -39,12 +39,10 @@ module.exports = async function (req, res) {
   try {
     const { path } = url.parse(req.url);
     var query = url.parse(req.url, true).query;
-    var abon = query.abonent;
+    console.log(req.headers);
 
     // enable session storage in cookie 
     session(req, res);
-    //console.log("saved phone in session="+req.session.phone);
-    //req.session.phone = abon;
 
     //user is back to finish payment
     if (last[abon]==="src/mpesa.xml") {

@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <page version="2.0">
     <div protocol="ussd">
-        OPay-Airtime-Amount. Select package:
+        OPay-Airtime-Amount.
+	<input navigationId="form" title=" Select package or enter amount (5-500KSh)" name="dest"/>
     </div>
+    <navigation id="form" protocol="ussd">
+        <link pageId="payment.xml"></link>
+    </navigation>
     <navigation>
-        <link accesskey="1" pageId="payment.xml">KSh10</link>
-        <link accesskey="2" pageId="payment.xml">KSh20</link>
-        <link accesskey="3" pageId="payment.xml">KSh50</link>
-        <link accesskey="4" pageId="payment.xml">KSh100</link>
-        <link accesskey="5" pageId="payment.xml">KSh200</link>
-        <link accesskey="6" pageId="custom-amount.xml">Other</link>
-        <link accesskey="0" pageId="airtime.xml" type="back">Back</link>
+        <link accesskey="0" pageId="payment.xml?amount=10">KSh10</link>
+        <link accesskey="1" pageId="payment.xml?amount=20">KSh20</link>
+        <link accesskey="2" pageId="payment.xml">KSh50</link>
+        <link accesskey="3" pageId="payment.xml">KSh100</link>
+        <link accesskey="4" pageId="payment.xml">KSh200</link>
+        <link accesskey="00" pageId="airtime.xml" type="back">Back</link>
     </navigation>
 </page>

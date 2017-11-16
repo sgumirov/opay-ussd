@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <page version="2.0">
     <div protocol="ussd">
-Transaction successful!
-Transaction# 42666777770000000000
-Tel# 076812345
-KSh100
+Transaction successful!<br/>
+Transaction# 42666777770000000000<br/>
+Tel# 076812345<br/>
+KSh100<br/>
 Method:wallet
 </div>
 </page>
