@@ -40,6 +40,7 @@ module.exports = async function (req, res) {
     const { path } = url.parse(req.url);
     var query = url.parse(req.url, true).query;
     console.log(req.headers);
+    var abon = query.abonent;
 
     // enable session storage in cookie 
     session(req, res);
