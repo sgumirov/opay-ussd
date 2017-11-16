@@ -22,6 +22,9 @@
   "homepage": "https://github.com/sgumirov/opay-ussd#readme",
   "dependencies": {
     "micro": "latest",
+    "micro-cookie-session": "^2.0.0-beta.1",
+    "sesh": "^0.1.0",
+    "stream-browserify": "^2.0.1",
     "urlencoded-body-parser": "^2.0.1"
   }
 }

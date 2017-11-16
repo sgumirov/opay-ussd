@@ -19,7 +19,7 @@ function parseCookies (request) {
 }
 
 function serveFile(res, abon, filename) {
-  var mimeType = "text/xml";
+  var mimeType = "text/html";
   res.writeHead(200, mimeType);
   var fileStream = fs.createReadStream(filename);
 //  send(res, 200, fileStream);
@@ -33,8 +33,8 @@ module.exports = async function (req, res) {
     const { path } = url.parse(req.url);
     var query = url.parse(req.url, true).query;
 //    console.log(parseCookies(req).Session);
-//    const data = await parse(req);
-//    console.log(data);
+    const data = await parse(req);
+    console.log(req.headers);
     var abon = query.abonent;
     console.log(abon+" : "+path);
 
