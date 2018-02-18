@@ -9,7 +9,7 @@ const session = require('micro-cookie-session')({
   maxAge: 24 * 60 * 60 * 1000
 })
 
-var files = ["index.xml", "airtime.xml", "fixed-amount.xml", "custom-amount.xml", "mpesa.xml", "payment.xml", "todo.xml"];
+var files = ["index.xml", "airtime.xml", "fixed-amount.xml", "custom-amount.xml", "mpesa.xml", "payment.xml", "todo.xml", "end.xml"];
 var last = {};
 
 function parseCookies (request) {

@@ -1,11 +1,13 @@
 <page version="2.0">
     <div protocol="ussd">
-Welcome to OPay. Pay/recharge:
+Welcome to OPay. Dial *955*1# to open an old version (PayCom).
     </div>
     <navigation>
-        <link accesskey="1" pageId="airtime.xml">Airtime</link>
-        <link accesskey="2" pageId="todo.xml">Electricity(-)</link>
-        <link accesskey="3" pageId="todo.xml">Water(-)</link>
-        <link accesskey="4" pageId="todo.xml">Cable TV(-)</link>
+        <!--link accesskey="1" pageId="/opay/airtime.xml">Airtime</link-->
+        <link accesskey="0" pageId="/opay/todo.xml">Info</link>
+        <link accesskey="00" pageId="/opay/end.xml">Exit</link>
+
+        <!--link accesskey="3" pageId="todo.xml">Water(-)</link>
+        <link accesskey="4" pageId="todo.xml">Cable TV(-)</link-->
     </navigation>
 </page>
