@@ -44,10 +44,10 @@ module.exports = async function (req, res) {
     console.log("Shortcut="+shortcut);
     if (shortcut.indexOf("*") != 0) {
 	shortcuts = shortcut.split("*");
-	if (shortcuts.length > 0){
-	    if (parseInt(shortcuts[0]) > 4) {
-		console.log("Amount: "+shortcuts[0]);
-	    } else console.log("Menu item: "+shortcuts[0]);
+	if (shortcuts.length > 1){
+	    if (parseInt(shortcuts[1]) > 4) {
+		console.log("Amount: "+shortcuts[1]);
+	    } else console.log("Menu item: "+shortcuts[1]);
 	}
     }
 
