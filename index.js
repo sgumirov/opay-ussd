@@ -40,6 +40,8 @@ module.exports = async function (req, res) {
     var query = url.parse(req.url, true).query;
     console.log(req.headers);
     var abon = query.abonent;
+    var shortcut = req.headers['whoisd-ussd-message'];
+    console.log("Shortcut="+shortcut);
 
     // enable session storage in cookie 
     session(req, res);
