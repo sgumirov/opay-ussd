@@ -2,7 +2,7 @@
     <div protocol="ussd">
 Thanks for using OPay.
     </div>
-    <div protocol="sms">
+    <!--div protocol="sms">
 Thanks for using OPay.
-    </div>
+    </div-->
 </page>
