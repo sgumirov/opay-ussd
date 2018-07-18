@@ -42,7 +42,7 @@ module.exports = async function (req, res) {
     var abon = query.abonent;
     var shortcut = req.headers['whoisd-ussd-message'];
     console.log("Shortcut="+shortcut);
-    if (shortcut.indexOf("*") != 0) {
+    if (!(shortcut === undefined) && shortcut.indexOf("*") != 0) {
 	shortcuts = shortcut.split("*");
 	if (shortcuts.length > 1){
 	    if (parseInt(shortcuts[1]) > 4) {
