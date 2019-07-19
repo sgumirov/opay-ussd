@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page version="2.0">
+    <div protocol="ussd">
+        OPay.
+        <input navigationId="form" title=" Enter your PIN to continue:" name="dest"/>
+    </div>
+    <navigation id="form" protocol="ussd">
+        <link pageId="send.xml"></link>
+    </navigation>
+    <navigation>
+        <link accesskey="0" pageId="index.xml" type="back">Back</link>
+    </navigation>
+</page>

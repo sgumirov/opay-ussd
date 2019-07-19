@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page version="2.0">
+    <div protocol="ussd">
+        OPay. Send N123. Enter phone or select:<br/>1>+2349021234567<br/>2>+2349027654321
+        <input navigationId="form" title="" name="dest"/>
+    </div>
+    <navigation id="form" protocol="ussd">
+        <link pageId="send-3.xml"></link>
+    </navigation>
+    <navigation>
+        <link accesskey="0" pageId="index.xml" type="back">Back</link>
+    </navigation>
+</page>

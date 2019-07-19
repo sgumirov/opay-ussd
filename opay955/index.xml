@@ -1,0 +1,11 @@
+<page version="2.0">
+    <div protocol="ussd">
+Welcome to OPay.
+    </div>
+    <navigation>
+        <link accesskey="1" pageId="pin-airtime.xml">Airtime</link>
+        <link accesskey="2" pageId="pin-send.xml">Send money</link>
+        <link accesskey="3" pageId="otp.xml">Generate OTP</link>
+        <link accesskey="4" pageId="pin-balance.xml">My Balance</link>
+    </navigation>
+</page>
