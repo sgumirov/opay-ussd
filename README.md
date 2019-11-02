@@ -1,6 +1,6 @@
 # OPay USSD
 
-This is a demo USSD service for OPay based on
+This is a demo USSD service for OPay service based on API of
 [Eyeline](https://eyeline.mobi/) [GlobalUSSD](https://globalussd.com/) platform.
 
 ## Menu hierarchy
@@ -15,7 +15,7 @@ Start again ->
   Transaction confirmation
 ```
 
-## Page example (start)
+## USSD screen example (this is service start)
 
 ```
 Welcome to OPay!
@@ -25,15 +25,14 @@ Welcome to OPay!
 4> My Balance
 ```
 
-## How to start
+## How to run
 
-To get and start:
+To get and run:
 
 ```bash
 git clone https://github.com/sgumirov/opay-ussd.git
 cd opay-ussd
-npm install
-npm install -g micro
+npm ci
 npm start
 ```
 
@@ -53,11 +52,11 @@ Built on top of [micro](https://github.com/zeit/micro "micro") microservice fram
 
 # Author
 
-Shamil Gumirov 2017-2019.
+Shamil Gumirov, 2017-2019.
 
 Disclaimer: I'm first PM of GlobalUSSD (aka SADS) project (started circa 2005).
 Feel free to reach me if you have questions.
 
 # License
 
-As-is. No warranties, no support.
+As-is. No warranties, no support obligations.
