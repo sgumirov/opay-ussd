@@ -4,7 +4,7 @@
   "description": "This is demo USSD service for OPay based on SADS Eyeline platform.",
   "main": "index.js",
   "scripts": {
-    "start": "micro -H 127.0.0.1 index.js"
+    "start": "micro -l tcp://127.0.0.1:3000 index.js"
   },
   "repository": {
     "type": "git",
