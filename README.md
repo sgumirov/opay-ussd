@@ -27,11 +27,20 @@ Welcome to OPay!
 
 ## How to run
 
-To get and run:
+To download, please clone it from github:
 
 ```bash
 git clone https://github.com/sgumirov/opay-ussd.git
 cd opay-ussd
+```
+
+There are two options:
+- Local run (requires NodeJS v16)
+- Dockerized run (obviously, requires only Docker)
+
+### Local run
+
+```
 npm ci
 npm start
 ```
@@ -39,11 +48,39 @@ npm start
 This makes service uses default `3000` port on ipv4 Localhost. So better to use nginx or change
 listening address to 0.0.0.0 by changing line in `package.json`:
 ```
-    "start": "micro -H 127.0.0.1 index.js"
+    "start": "micro -l tcp://127.0.0.1:3000 index.js"
 ```
-to:
+to (by default the endpoint is: `0.0.0.0:3000`):
 ```
-    "start": "micro -H 0.0.0.0 index.js"
+    "start": "micro index.js"
+```
+
+### Dockerized run
+
+```
+docker build . -t opay-ussd
+docker run -p 3000:3000 opay-ussd
+```
+
+## Usage
+
+This service is designed to emulate GlobalUSSD USSD service. It can also work with Android GlobalUSSD emulator.
+
+Example of manual request and response, just to give some perspective (note `index.xml` in url, can also query other mentioned xmls from response):
+
+```
+$ curl http://127.0.0.1:3000/index.xml
+<page version="2.0">
+    <div protocol="ussd">
+Welcome to OPay.
+    </div>
+    <navigation>
+        <link accesskey="1" pageId="pin-airtime.xml">Airtime</link>
+        <link accesskey="2" pageId="pin-send.xml">Send money</link>
+        <link accesskey="3" pageId="otp.xml">Generate OTP</link>
+        <link accesskey="4" pageId="pin-balance.xml">My Balance</link>
+    </navigation>
+</page>
 ```
 
 # Dependencies
