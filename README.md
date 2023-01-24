@@ -52,9 +52,9 @@ Built on top of [micro](https://github.com/zeit/micro "micro") microservice fram
 
 # Author
 
-Shamil Gumirov, 2017-2019.
+(C) Copyright by Shamil Gumirov, 2017-2023.
 
-Disclaimer: I'm first PM of GlobalUSSD (aka SADS) project (started circa 2005).
+Disclaimer: I had been a teamlead of GlobalUSSD (aka SADS) project in 2005-2010.
 Feel free to reach me if you have questions.
 
 # License
