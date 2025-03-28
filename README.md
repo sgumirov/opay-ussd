@@ -1,7 +1,9 @@
-# OPay USSD
+# USSD DEMO
 
-This is a demo USSD service for OPay service based on API of
-[Eyeline](https://eyeline.mobi/) [GlobalUSSD](https://globalussd.com/) platform.
+This is a demo USSD service for OPay service based on
+[Eyeline](https://eyeline.mobi/) [GlobalUSSD](https://globalussd.com/) platform API.
+
+**NOTE:** The author is currently not affiliated with any of: Opera Software, OPay, Eyeline Inc, GlobalUSSD project, SADS project.
 
 ## Menu hierarchy
 
@@ -89,11 +91,10 @@ Built on top of [micro](https://github.com/zeit/micro "micro") microservice fram
 
 # Author
 
-(C) Copyright by Shamil Gumirov, 2017-2023.
+(C) Copyright by Shamil Gumirov, 2017-2025.
 
-Disclaimer: I had been a teamlead of GlobalUSSD (aka SADS) project in 2005-2010.
-Feel free to reach me if you have questions.
+Disclaimer: The author served as tech/teamlead for Eyeline's GlobalUSSD project in 2005-2010. Not affiliated currently.
 
 # License
 
-As-is. No warranties, no support obligations.
+As-is. No warranties, no support obligations. This is not a support account, this repository is **not** part of any official or unofficial docs.
